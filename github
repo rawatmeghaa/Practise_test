@@ -1,0 +1,63 @@
+git init 
+
+git add .
+
+git commit -m "updated code"
+
+git remote add origin "github http"
+
+####branch 
+
+git checkout branchname
+
+git checkout -b new_branch
+
+git push origin new_branch
+
+###push stage to prod
+
+git chekout prod
+
+git pull origin prod
+
+git merge stage 
+
+git push origin prod
+
+
+######commit
+
+git add .
+
+git commit -m "added comment"
+
+git push origin main
+
+
+
+#####show commit 
+
+git log 
+
+
+
+
+#######merge  test to prod ,combining two branches into one history  , quiet messy 
+
+git merge test 
+
+
+
+########rebase 
+move my branch commits to start from a diffrent base  , making history linear
+
+start
+main:    A --- B --- C
+feature:       D --- E
+
+
+git checkout feature
+git rebase main
+
+main:    A --- B --- C
+feature:              D' --- E'
